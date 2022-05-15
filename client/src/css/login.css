@@ -1,0 +1,40 @@
+/* LOGIN PAGE CSS */
+
+.login_page
+{
+	font-family: 'Nova Round', cursive !important;
+	background: url("../imgs/signup_bg.jpg");
+	background-size: cover;
+}
+
+.login_page a
+{
+	text-decoration: none !important;
+}
+
+.login_page a:hover
+{
+	text-decoration: underline !important;
+}
+
+.sign_in_btn
+{
+	color: #838bb2; 
+	border: 1px solid #919191; 
+	border-radius: 4px ;
+	background: #f3f3f3;
+}	
+
+.fb_signin_btn
+{
+	 border-radius: 4px; 
+	 background: #325c95; 
+	 color: white; 
+}
+
+.sign_up_btn
+{
+	background: #00a400;
+	color: white;
+	font-weight: 500;
+}

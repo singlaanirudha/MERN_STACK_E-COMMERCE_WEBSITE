@@ -1,0 +1,35 @@
+.totop_box_js
+{
+    visibility: visible !important;
+}
+
+.totop_box
+{
+    width: auto;
+    height: auto;
+    position: fixed;
+    bottom: 5px;
+    font-size: 60px;
+    left: 48%;
+    animation: to_top_anim 1.2s ease 0s infinite alternate-reverse forwards;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.totop_box a
+{
+    color: black;
+}
+
+
+@keyframes to_top_anim {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

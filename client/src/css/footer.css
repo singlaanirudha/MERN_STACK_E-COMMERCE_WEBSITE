@@ -1,0 +1,57 @@
+/* FOOTER CSS */
+
+.footer
+{
+	background: #232F3E;
+	color: #DDD;
+	font-weight: 100 !important;
+	line-height: 1.82 !important;
+	font-family: 'Poppins', sans-serif !important;
+}
+
+.footer ul li
+{
+	list-style: none;
+}
+
+.footer a
+{
+	color: #DDD;
+	text-decoration: none;
+}
+
+.footer a:hover
+{
+	text-decoration: underline;
+}
+
+.subs_btn
+{
+	background: white !important;
+	color: black !important;
+	font-weight: bold !important;
+}
+
+.subs_btn:hover
+{
+	background: black !important;
+	color: white !important;
+}
+
+
+.footer_2
+{
+	background: #131A22;
+	color: #DDD;
+	font-family: 'Poppins', sans-serif !important;
+}
+
+.footer_2 i
+{
+	font-size: 25px;
+}
+
+.footer_2 a:hover
+{
+	text-decoration: none;
+}

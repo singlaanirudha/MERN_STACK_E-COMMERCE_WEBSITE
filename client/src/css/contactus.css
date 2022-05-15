@@ -1,0 +1,11 @@
+.contact_bg
+{
+    background: url('../imgs/contact_bg.png');
+    background-size: cover;
+}
+
+.form_bg
+{
+    background-color: white;
+    border-radius: 20px;
+}

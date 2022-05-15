@@ -1,0 +1,51 @@
+.image-container {
+    background-image: url("../imgs/abtus_hero_img.png");
+    background-size: cover;
+    position: relative;
+    height: 350px;
+  }
+  
+  .text {
+    background-color: white;
+    color: black;
+    font-size: 10vw; 
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    width: 65%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+  }
+
+  .img_size
+  {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .values
+{
+	background: url(../imgs/abtus_bg.jpg);
+	background-size: cover;
+	color: white;
+	font-weight: 400 !important;
+}
+
+.btn_cls
+{
+	background: #00aeef;
+	color: white;
+	font-size: 25px;
+}
+
+@media only screen and (max-width: 850px)
+{
+  .btn_cls
+  {
+    font-size: 15px;
+  }
+}

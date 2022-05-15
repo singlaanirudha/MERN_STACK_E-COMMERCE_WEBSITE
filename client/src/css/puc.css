@@ -1,0 +1,44 @@
+.puc_bg
+{
+	background: url(../imgs/puc_bg.jpg) no-repeat;
+	background-size: cover;
+	height: auto;
+	font-family: 'Roboto Mono', monospace !important; 
+}
+
+.inner_cont
+{
+	height: auto;
+	background: rgba(255,255,255,0.8);
+	border-radius: 20px;
+}
+
+.timer_div
+{
+	height: 100px;
+	width: 90px;
+	border-radius: 10px;
+	background: #333333;
+	margin: 10px;
+	color: white;
+	font-weight: bold;
+}
+
+.get_notified_btn
+{
+	color: white;
+	background: #846add;
+	border-radius: 5px;
+}
+
+.inner_cont h2
+{
+	color: #999999;
+}
+
+.timer_div p
+{
+	color: white;
+	font-size: 40px;
+	line-height: 0.9;
+}

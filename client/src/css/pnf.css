@@ -1,0 +1,63 @@
+.pnf_heading
+{
+	font-size: 120px !important;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 600px)
+{
+	.pnf_heading
+	{
+		font-size: 40px !important;		
+	}
+}
+
+
+.page_404
+{ 
+	padding:40px 0; 
+	background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+
+.page_404 img
+{ 
+	width:100%;
+}
+
+.bg_404
+{ 	
+ 	background-image: url(../imgs/404.gif);
+    height: 400px;
+    background-position: center;
+}
+  
+.bg_404 h1
+{
+	font-size:80px;
+}
+ 
+.bg_404 h3
+{
+	font-size:80px;
+}
+			 
+.link_404
+{			 
+	color: #fff!important;
+    padding: 10px 20px;
+    background: #CBB26A;
+    margin: 20px 0;
+    display: inline-block;
+	text-decoration: none !important;
+}
+
+.link_404:hover
+{
+	font-weight: 500;
+	text-decoration: underline !important;
+}
+	
+.contant_box_404
+{ 
+	margin-top:-50px;
+}
