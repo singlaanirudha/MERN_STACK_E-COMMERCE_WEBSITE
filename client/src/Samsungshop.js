@@ -89,6 +89,7 @@ const postData=async(e) =>
         {product.map((productloop)=> {
             return(
                 <>
+                {/* key={productloop.id} */}
                     <div className='col'>
                         <div className='product_form'>
                             <div className='product_card_dmns p-0 pb-2 text-center m-5'>

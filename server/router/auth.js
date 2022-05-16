@@ -2,6 +2,7 @@ const express=require('express');
 const jwt= require('jsonwebtoken');
 const Signup = require('../model/user_schema');     //mongodb register schema
 const Samsung_shop = require('../model/samsung_schema');     //mongodb SAMSUNG schema
+const Cart = require('../model/user_cart');     //mongodb SAMSUNG schema
 const router= express.Router(); 
 require('../database/db_connection')        //mongodb database connectivity
 
@@ -207,7 +208,8 @@ router.route('/getproduct').get((req, res)=>{
 
 router.post('/cart',async(req,res)=>
 {
-
+//  console.log(req.body);
+//  res.json({message:req.body});
     const {product_name, product_mrp, product_price, product_date}=req.body;
     if(!product_name || !product_mrp || !product_price || !product_date)
     {
@@ -216,10 +218,10 @@ router.post('/cart',async(req,res)=>
     try
     {
         //"mongodb schema name" : "name given in form input type(front end)"
-        const cart_item=new Cart({product_name:product_name, product_mrp:product_mrp, product_price:product_price, product_date:product_date});
+        const cartitem=new Cart({product_name, product_mrp, product_price, product_date});
 
         //to get a message when the data is posted on mongodb database 
-        const addedtocart= await cart_item.save();
+        const addedtocart= await cartitem.save();
         if(addedtocart)
         {
             res.status(201).json({message:"Added To Cart"});
