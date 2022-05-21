@@ -1,4 +1,7 @@
 // HEADER TEMPLATE
+// import { createContext } from 'react';
+// import { useReducer } from 'react';
+// import { initialState, reducer } from '../src/reducer/Userreducer';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 import Navbar from './Navbar.js'
@@ -17,10 +20,16 @@ import Cart from './Cart';
 
 
 
+// export const userContext= createContext();
 function Header()
 {
+    // const[state, dispatch] = useReducer(reducer, initialState)
+
     return(
         <>
+
+        {/* <userContext.Provider value={{state, dispatch}}> */}
+
        <Router>
             <Navbar></Navbar>
                 <Routes>
@@ -37,6 +46,7 @@ function Header()
                     <Route path='/MyCart' element={<Cart />}></Route>
                 </Routes>
         </Router>
+        {/* </userContext.Provider> */}
         </>
     )
 }

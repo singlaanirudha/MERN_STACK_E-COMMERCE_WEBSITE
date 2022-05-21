@@ -236,4 +236,11 @@ router.post('/cart',async(req,res)=>
 
 // ------------------------------------------------------------------------------------
 
+// router.get('/logout', (req, res)=>
+// {
+//     console.log("logut user");
+//     res.clearCookie(jwtoken, {path:'/Signin'});
+//     res.status(200).send('user logout')
+// })
+
 module.exports =router;

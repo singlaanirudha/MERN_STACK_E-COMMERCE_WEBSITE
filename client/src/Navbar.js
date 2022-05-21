@@ -1,5 +1,9 @@
+import Logout from './Logout';
+
 import { useState, useEffect } from 'react';
 import {NavLink} from 'react-router-dom'; //for linking
+
+// import { userContext } from './Header';
 
 import './css/header.css'
 
@@ -11,7 +15,6 @@ import nav_img_4 from './imgs/nav_4.png'
 
 function Navbar()
 {
-
     const[profile, setprofile]= useState({});
 
     const profilename = async()=> {
@@ -221,9 +224,7 @@ function Navbar()
                         </NavLink>
 
                         <li>
-                            <button type="button" class="btn btn-danger w-50">
-                                Logout <i class="fa-solid fa-person-walking" /> 
-                            </button>
+                            <Logout></Logout>
                         </li>
  
                     </ul>
@@ -231,9 +232,6 @@ function Navbar()
                 <NavLink to='/MyCart' className='nav-link'>
                     <i title="CART" className="fa-solid fa-cart-shopping icons"></i>
                 </NavLink>
-
-
-            
 
             </div>
             </nav>
