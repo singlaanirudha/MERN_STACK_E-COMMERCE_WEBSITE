@@ -23,48 +23,7 @@ useEffect(()=> {
     }).then(jsonRes =>setproduct(jsonRes));
 },[]);
 
-// --------------------------------------------------------------
 
-// const [cart, setcart]=useState({
-//     product_name:'', product_mrp:'', product_price:'', product_date:'' 
-// });  
-
-let name, value;
-const handleInputs=(e)=>{
-    console.log(e);
-    name = e.target.name;
-    value = e.target.value;
-    setproduct ({...product, [name]:value});
-}    
-
-const postData=async(e) =>
-{
-    e.preventDefault();
-    const {product_name, product_mrp, product_price, product_date} =product;
-
-        const res = await fetch("/cart", {         
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({
-                product_name, product_mrp, product_price, product_date
-            })
-        })
-
-        const data= await res.json()
-
-        if(data.status === 422 || !data){
-            window.alert("Added To Cart");
-        }
-
-        else
-        {
-            window.alert("Please Add To Cart Again");
-        }
-}
-
-// -------------------------------------------------------------
 
     return(
         <>
@@ -98,10 +57,10 @@ const postData=async(e) =>
 
                             {/* form start */}
 
-                            <form method='post'>  
+                            <form>  
 
                                 <div className='w-100 text-center h6' style={{"fontWeight":600}}>
-                                    <input type='text' name='product_name' className='form-control text-center product_name' value={productloop.product_name} onChange={handleInputs}></input>
+                                    <input type='text' name='product_name' className='form-control text-center product_name' value={productloop.product_name}></input>
                                 </div>
 
                                 <i className="fa-solid fa-star rating_checked"></i>
@@ -112,25 +71,25 @@ const postData=async(e) =>
 
                                 <div className='w-100'>
                                 
-                                    <input type='text' name='product_mrp' className='form-control product_mrp_css text-center' value={productloop.product_mrp} onChange={handleInputs}></input>
+                                    <input type='text' name='product_mrp' className='form-control product_mrp_css text-center' value={productloop.product_mrp}></input>
                                 
                                 </div>
                                 
                                 <div className='w-100'>
                                     
-                                    <input type='text' name='product_price' className='form-control text-center product_price_css' value={productloop.product_price} onChange={handleInputs}></input>
+                                    <input type='text' name='product_price' className='form-control text-center product_price_css' value={productloop.product_price} ></input>
                                 
                                 </div>
                                 
                                 <div className='w-100'>
                                     
-                                    <input type='text' name='product_date' className='form-control text-center h6 fw-bold' value={productloop.product_date} onChange={handleInputs}></input>
+                                    <input type='text' name='product_date' className='form-control text-center h6 fw-bold' value={productloop.product_date}></input>
                                 
                                 </div>
 
                                 <h6> <b> FREE Delivery </b> by Prime </h6>
 
-                                <button type='submit' className="btn w-75 atc_btn" onClick={postData}> Add To Cart <i className="fa-solid fa-cart-plus"></i> </button>
+                                <button type='submit' className="btn w-75 atc_btn"> Add To Cart <i className="fa-solid fa-cart-plus"></i> </button>
 
                             </form>   
 
